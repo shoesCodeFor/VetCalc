@@ -1,4 +1,22 @@
 <resources>
     <string name="app_name">Vet Calc</string>
+    <string name="version">0.1</string>
     <string name="splash_message">Welcome to Vet Calc</string>
+    <string name="weight_prompt">Please select your Units of measurement.
+        Then Enter a Weight in Pounds or Kilograms</string>
+    <string name="wt_hint">Enter a Number</string>
+    <string name="weight_btn">Save Weight</string>
+    <string name="med_prompt">Select a medication:</string>
+    <string name="lbLabel">lbs(Pound)</string>
+    <string name="kgLabel">kg(Kilograms)</string>
+    <string name="lockWtBtn">Confirm weight &amp; Proceed</string>
+    <string name="lbsOut">Pounds(lbs): </string>
+    <string name="kgsOut">Kilograms(kgs): </string>
+    <string name="defaultWeight">0</string>
+    <string-array name="flow">
+        <item>Emergency Flow Chart</item>
+        <item>Canine Meds</item>
+        <item>Feline Meds</item>
+    </string-array>
+
 </resources>

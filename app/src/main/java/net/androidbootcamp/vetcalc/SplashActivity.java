@@ -1,3 +1,11 @@
+/*  Vet Calc - Version .01
+    By Schuyler Ankele
+    Splash Activity - More Documentation will be provided on the project README.md
+
+ */
+
+
+
 package net.androidbootcamp.vetcalc;
 
 import android.content.Intent;
@@ -23,6 +31,7 @@ public class SplashActivity extends AppCompatActivity {
             }
         };
         Timer openeing = new Timer();
-        openeing.schedule(task, 5000);
+        // 2.5 seconds - We can extend this if we need to load other data later
+        openeing.schedule(task, 2500);
     }
 }
