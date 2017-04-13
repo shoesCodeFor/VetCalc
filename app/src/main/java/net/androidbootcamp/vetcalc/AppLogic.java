@@ -3,7 +3,10 @@ package net.androidbootcamp.vetcalc;
 /**
  * Created by Shoe on 4/5/17.
  */
+import android.view.View;
+import android.widget.ListView;
 import android.widget.RadioButton;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import java.io.Serializable;
@@ -13,7 +16,7 @@ public class AppLogic implements Serializable{
     public static DecimalFormat wtFormat = new DecimalFormat("###,###.##");
 
 
-  
+
 
     /*
      * @param postWtVals(double, double, RadioButton, RadioButton, TextView, TextView)
@@ -51,6 +54,16 @@ public class AppLogic implements Serializable{
 
         return true;
     }
+    public static void smartScroll(final ScrollView nameOfScrContainer, final View desiredPosition) {
+        //Write your logic here.
+        final ScrollView scrollView = nameOfScrContainer;
+        scrollView.postDelayed(new Runnable() {
+            public void run() {
+                scrollView.scrollTo(0, (int)desiredPosition.getY());
+            }
+        }, 100);
+    }
+
 
 
 }
