@@ -3,18 +3,17 @@ package net.androidbootcamp.vetcalc;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-public class MedsActivity extends AppCompatActivity {
+public class ERABCsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // We will change this to parsable if speed becomes an issue
         Patient fido = (Patient) getIntent().getSerializableExtra("patientObj");
-        setContentView(R.layout.activity_meds);
+        setContentView(R.layout.activity_er_abc);
         final AppLogic tools = new AppLogic();
 
         // Create variables for the elements within the view

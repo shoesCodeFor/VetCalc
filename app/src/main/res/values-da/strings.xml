@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Vet Beregn</string>
+    <string name="adv1">Opnå elektrokardiogram og Bestem Arrest Rhythm</string>
+    <string name="adv2">Intravenøst kateter for Drug Therapy og Fluid administration</string>
+    <string name="adv3">intravenøse væsker</string>
+    <string name="advSupportHead">Start avanceret genoplivning</string>
+    <string name="airway">A = Airway(luftrøret) - Undersøg for luftvejsobstruktion, det vurderes om vejrtrækning, udføre intubation</string>
+    <string name="basic_abc"><![CDATA[Basic ABC ->]]></string>
+    <string name="breathing">B = Vejrtrækning - Udluft med 100% oxygen, 10-24 vejrtrækninger / minut</string>
+    <string name="breathing_full">B = Vejrtrækning - Udluft med 100% oxygen, 10-24 vejrtrækninger / minut</string>
+    <string name="airway_full">A = Airway(luftrøret) - Undersøg for luftvejsobstruktion, det vurderes om vejrtrækning, udføre intubation ▶</string>
+
+</resources>

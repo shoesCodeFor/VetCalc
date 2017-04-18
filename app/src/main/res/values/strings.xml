@@ -1,42 +1,43 @@
 <resources>
     <!-- System messages -->
     <string name="app_name">Vet Calc</string>
-    <string name="version">0.1</string>
-    <string name="splash_message">Welcome to Vet Calc</string>
+    <string name="version" translatable="false">0.1</string>
+    <string name="splash_message" translatable="false">Welcome to Vet Calc</string>
     <!-- Prompts and Labels -->
-    <string name="weight_prompt">Please select your Units of measurement.
+    <string name="weight_prompt" translatable="false">Please select your Units of measurement.
         Then Enter a Weight in Pounds or Kilograms</string>
-    <string name="wt_hint">Enter a Number</string>
-    <string name="weight_btn">Save Weight</string>
-    <string name="med_prompt">Select a medication:</string>
-    <string name="lbLabel">lbs(Pound)</string>
-    <string name="kgLabel">kg(Kilograms)</string>
-    <string name="lockWtBtn">Confirm weight &amp; Proceed</string>
-    <string name="lbsOut">Pounds(lbs): </string>
-    <string name="kgsOut">Kilograms(kgs): </string>
-    <string name="defaultWeight">0</string>
+    <string name="wt_hint" translatable="false">Enter a Number</string>
+    <string name="weight_btn" translatable="false">Save Weight</string>
+    <string name="med_prompt" translatable="false">Select a medication:</string>
+    <string name="lbLabel" translatable="false">lbs(Pound)</string>
+    <string name="kgLabel" translatable="false">kg(Kilograms)</string>
+    <string name="lockWtBtn" translatable="false">Confirm weight &amp; Proceed</string>
+    <string name="lbsOut" translatable="false">Pounds(lbs): </string>
+    <string name="kgsOut" translatable="false">Kilograms(kgs): </string>
+    <string name="defaultWeight" translatable="false">0</string>
     <!-- Emergency Flow Content -->
     <string-array name="flow">
-        <item>Emergency Flow Chart</item>
+        <item>Emergency Meds</item>
         <item>Canine Meds</item>
         <item>Feline Meds</item>
+        <item>Emergency Flow Chart</item>
     </string-array>
-    <string name="emergencyHeader">Begin BASIC life support : A B C</string>
+    <string name="emergencyHeader" translatable="false">Begin BASIC life support : A B C</string>
     <string name="airway">A = Airway - Assess for airway obstruction, assess for breathing, perform intubation ▶</string>
-    <string name="airway_full"></string>
+    <string name="airway_full">A = Airway - Assess for airway obstruction, assess for breathing, perform intubation ▶</string>
     <string name="breathing">B = Breathing - Ventilate with 100% oxygen, 10-24 breaths/minute ▶</string>
     <string name="breathing_full">B = Breathing - Ventilate with 100% oxygen, 10-24 breaths/minute ▶</string>
-    <string name="circulation">C = Circulation - Assess for heart beat and pulses if absent,
+    <string name="circulation" translatable="false">C = Circulation - Assess for heart beat and pulses if absent,
         begin chest compressions, 100-120 compressions/minute ▶</string>
-    <string name="circulation_full">C = Circulation - Assess for heart beat and pulses if absent,
+    <string name="circulation_full" translatable="false">C = Circulation - Assess for heart beat and pulses if absent,
         begin chest compressions, 100-120 compressions/minute ▶</string>
     <string name="advSupportHead">Start advanced life support</string>
     <string name="adv1">Obtain Electrocardiogram and Determine Arrest Rhythm</string>
     <string name="adv2">IV catheter for Drug Therapy and Fluid administration</string>
     <string name="adv3">Intravenous Fluids</string>
-    <string name="fluidLabel">Fluid Rate</string>
-    <string name="closingAdv">1/4 to 1/3 shock dose over 20-30 mins, reassess and repeat prn</string>
-    <string name="basic_abc"><![CDATA[Basic ABC ->]]></string>
+    <string name="fluidLabel" translatable="false">Fluid Rate</string>
+    <string name="closingAdv" translatable="false">1/4 to 1/3 shock dose over 20-30 mins, reassess and repeat prn</string>
+    <string name="basic_abc"><![CDATA[Grundlæggende ABC->]]></string>
     <!-- Medication Flow -->
     <!-- Add to Log Flow -->
 </resources>

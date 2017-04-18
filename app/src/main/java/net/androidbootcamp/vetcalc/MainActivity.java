@@ -14,7 +14,6 @@
 
 package net.androidbootcamp.vetcalc;
 import android.content.Intent;
-import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -82,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 launchNewAct(view, fido);
-                // setContentView(R.layout.activity_meds);
+                // setContentView(R.layout.activity_er_abc);
             }
         });
 
@@ -93,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void launchNewAct(View view, Object o){
         Intent i;
-        i = new Intent(this, MedsActivity.class);
+        i = new Intent(this, ERABCsActivity.class);
         i.putExtra("patientObj", (Serializable) o);
         startActivity(i);
 

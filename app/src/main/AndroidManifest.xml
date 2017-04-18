@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".MedsActivity"></activity>
+        <activity android:name=".ERABCsActivity" />
+        <activity android:name=".ERMedsActivity"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Vet Calc</string>
+    <string name="adv1">Obtain Electrocardiogram and Determine Arrest Rhythm</string>
+    <string name="adv2">administration</string>
+    <string name="adv3">Intravenous</string>
+    <string name="advSupportHead">Start advanced life support</string>
+    <string name="airway">A = Airway - Assess for airway obstruction, assess for breathing, perform intubation ▶</string>
+    <string name="basic_abc"><![CDATA[Basic ABC ->]]></string>
+    <string name="breathing">B = Breathing - Ventilate with 100% oxygen, 10-24 breaths/minute ▶</string>
+    <string name="airway_full">A = Airway - Assess for airway obstruction, assess for breathing, perform intubation ▶</string>
+    <string name="breathing_full">B = Breathing - Ventilate with 100% oxygen, 10-24 breaths/minute ▶</string>
+</resources>
