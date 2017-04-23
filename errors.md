@@ -3,12 +3,18 @@
 Error Log 4-22-2017 VetCalc
 
 Warning:(2, 2) Using version 1.0.1 of the constraint library, which is obsolete
+
 Warning:(29, 9) Consider adding `android:layout_marginStart="32dp"` to better support right-to-left layouts
+
 Warning:(31, 9) [I18N] Hardcoded string "Select a Medication (or Scroll down):", should use `@string` resource
 Warning:(65, 14) This `TableLayout` layout or its `LinearLayout` parent is useless
+
 Warning:(69, 18) This `TableRow` view is useless (no children, no `background`, no `id`, no `style`)
+
 Warning:(73, 18) This `TableRow` view is useless (no children, no `background`, no `id`, no `style`)
+
 Warning:(77, 18) This `TableRow` view is useless (no children, no `background`, no `id`, no `style`)
+
 Warning:(81, 18) This `TableRow` view is useless (no children, no `background`, no `id`, no `style`)
 /Users/Shoe/AndroidStudioProjects/VetCalc/app/src/main/java/net/androidbootcamp/vetcalc/Patient.java
 Warning:(11, 1) Access can be package-private
