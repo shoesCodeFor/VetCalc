@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void launchNewAct(View view, Object o){
         Intent i;
-        i = new Intent(this, ERABCsActivity.class);
+        i = new Intent(this, ERMedsActivity.class);
         i.putExtra("patientObj", (Serializable) o);
         startActivity(i);
 

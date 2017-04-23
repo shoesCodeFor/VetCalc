@@ -16,7 +16,9 @@ public class Patient implements Serializable {
     private String species;
     private String name;
 
-    // Patient constructor
+    /**
+     *
+     */
     public Patient() {
         weight = -1;
         kg = -1;
@@ -25,12 +27,20 @@ public class Patient implements Serializable {
         name = "";
     }
 
-    // If you overload the constructor I assume it in kg
+    /**
+     *
+     * @param weight = simple contructor when only weight in kg is specified
+     */
     public Patient(double weight){
         setWeight(weight, true);
     }
 
-    // And one more
+    /**
+     *
+     * @param weight
+     * @param species
+     * @param name
+     */
     public Patient(double weight, String species, String name){
         setWeight(weight, true);
         this.species = species;
@@ -38,11 +48,10 @@ public class Patient implements Serializable {
     }
 
 
-
-
-    /* Initialize patient weight and store it as kilograms.
-     * Boolean kfOrPound controls radio input
-     * true = kilograms : false = pounds
+    /**
+     *
+     * @param a = weight in kilograms
+     * @param kgOrPounds = the users weight units preference
      */
     public void setWeight(double a, boolean kgOrPounds) {
         if (kgOrPounds) {

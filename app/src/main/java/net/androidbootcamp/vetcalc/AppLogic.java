@@ -1,8 +1,6 @@
 package net.androidbootcamp.vetcalc;
 
-/**
- * Created by Shoe on 4/5/17.
- */
+import android.content.Intent;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.RadioButton;
@@ -12,17 +10,24 @@ import android.widget.TextView;
 import java.io.Serializable;
 import java.text.DecimalFormat;
 
+/**
+ *   AppLogic Class contains miscellaneous tools for the VetCalc App.
+ */
 public class AppLogic implements Serializable{
     public static DecimalFormat wtFormat = new DecimalFormat("###,###.##");
 
 
-
-
-    /*
-     * @param postWtVals(double, double, RadioButton, RadioButton, TextView, TextView)
-     *                   This method will post our calculated weights
-     *                   onto the screen to check before calculating meds
-     *  @
+    /**
+     *  This method will post our calculated weights
+     *  onto the screen to check before calculating meds
+     *  We can refactor this - it does too much
+     * @param kg = the patient weight entered in KG
+     * @param lb
+     * @param a
+     * @param b
+     * @param one
+     * @param two
+     * @return
      */
     public static boolean postWtVals(double kg, double lb, RadioButton a, RadioButton b,
                                      TextView one, TextView two){
@@ -54,6 +59,12 @@ public class AppLogic implements Serializable{
 
         return true;
     }
+
+    /**
+     *
+     * @param nameOfScrContainer = This id is the name of your ScrollContainer
+     * @param desiredPosition = The desired position is the id you would like to jump to
+     */
     public static void smartScroll(final ScrollView nameOfScrContainer, final View desiredPosition) {
         //Write your logic here.
         final ScrollView scrollView = nameOfScrContainer;
@@ -62,7 +73,21 @@ public class AppLogic implements Serializable{
                 scrollView.scrollTo(0, (int)desiredPosition.getY());
             }
         }, 100);
+
     }
+
+    /**
+     *
+     * @param in is an array of String arrays.  For this method we only need the name (position 0).
+     * @param out is the array we want to fill with names of medications
+     */
+
+    public static void fillList(String[][] in, String [] out){
+        for(int i =0; i < in.length; i++){
+            out[i] = in[i][0];
+        }
+    }
+
 
 
 
