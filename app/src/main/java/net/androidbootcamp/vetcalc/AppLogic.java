@@ -82,13 +82,39 @@ public class AppLogic implements Serializable{
      * @param out is the array we want to fill with names of medications
      */
 
-    public static void fillList(String[][] in, String [] out){
+    public static void fillMedList(String[][] in, String [] out){
         for(int i =0; i < in.length; i++){
             out[i] = in[i][0];
         }
     }
+    /**
+     *
+     * @param in is an array of String arrays.  For this method we only need the name (position 0).
+     * @param i is the position of the Medication indicated by the 'medSpinner'
+     * @param out is the array we want to fill with a dosage range and concentration
+     *
+     */
+
+    public static void getDoseRange(String[][] in, int i, double [] out){
+        /** Our data in the Medication goes like this
+         * Inputs:
+         * 0 = Name
+         * 1 = Concentration (out[0])
+         * 2 = Min Range
+         * 5 = Max Range
+         *
+         * Outputs:
+         * 0 = Concentration
+         * 1 = Min Dosage
+         * 4 = Max Dosage
+         * */
+
+        out[0] = Double.parseDouble(in[i][1]); // Gets Concentration of Med at position i
+        out[1] = Double.parseDouble(in[i][2]); // Gets Min Dosage Med at position i
+        out[2] = Double.parseDouble(in[i][3]); // Gets Dosage 2/4 of Med at position i
+        out[3] = Double.parseDouble(in[i][4]); // Gets Dosage 3/4 of Med at position i
+        out[4] = Double.parseDouble(in[i][5]); // Gets Max Dosage of Med at position i
+    }
 
 
-
-
-}
+} // End of AppLogic Class

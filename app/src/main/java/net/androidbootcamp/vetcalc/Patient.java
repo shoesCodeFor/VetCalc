@@ -1,13 +1,15 @@
 package net.androidbootcamp.vetcalc;
 
-/*
+/**
  * The Patient Class will pass a patient object between our activities
  * Method derived from Android Documentation by Google
  * Intents - We will build our object in each Activity;
  */
 import java.io.Serializable;
 
-
+/**
+ *   Patient Class is serializable so that we can pass it between Activities
+ */
 public class Patient implements Serializable {
     // Declare the variables
     private double weight;
@@ -37,9 +39,9 @@ public class Patient implements Serializable {
 
     /**
      *
-     * @param weight
-     * @param species
-     * @param name
+     * @param weight = patient weight in kilograms
+     * @param species = Canine or Feline
+     * @param name = Patient Name for the log file
      */
     public Patient(double weight, String species, String name){
         setWeight(weight, true);
