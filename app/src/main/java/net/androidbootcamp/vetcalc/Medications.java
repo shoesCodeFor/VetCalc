@@ -37,11 +37,17 @@ public class Medications {
 
     /* This is the data arrangment for the multidimensional medications array
                     NameOfDrug, Concentration in mg/ml, dosageRange(vals in mg/kg - 4 cols 0s are blank), IV, IM */
+
+
+
+
+
+
     protected final String[][] erMedications =
             {       {"Atipamazole (IV)",
                             "5" , "0.05", "0.1", "0.15", "0.2", "true", "false"},          // 0
                     {"Atropine (IV)",
-                            "0.54" , "0.01", "0.02", "", "", "true", "false" },               // 1
+                            "0.54" , "0.01", "0.0125", ".015", ".02", "true", "false" },            // 1
                     {"Dexamethasone SP (IV)",
                             "4","0.25","0.5", "1.0","2.0","true", "false"},        // 2
                     {"Diphenhydramine (IM, IV)",
@@ -51,11 +57,11 @@ public class Medications {
                     {"Flumazenil (IV)",
                             "0.1", "0.005", "0.01", "0.02", "0.04", "true", "false"},
                     {"Lidocaine (IV)",
-                            "20" , "0.5","1.0","2.0", "","true","false"},// 5
+                            "20" , "0.5","1.0", "1.5" ,"2.0","true","false"},   // 5 added value[3] 1.5
                     {"Nalbuphine (IV)",
-                            "10" , "0.50","0.75","1.0", "","true","false"},//6
+                            "10" , "0.50","0.6",".8", "1.0","true","false"},//6
                     {"Naloxone (IV)",
-                            "0.4" , "0.001","0.005","0.01", "","true","false"}//7
+                            "0.4" , "0.001","0.025", "0.005","0.01","true","false"}//7
             };
 
 

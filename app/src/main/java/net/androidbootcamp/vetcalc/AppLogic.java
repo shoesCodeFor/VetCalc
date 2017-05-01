@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import java.io.Serializable;
 import java.text.DecimalFormat;
+import java.util.List;
 
 /**
  *   AppLogic Class contains miscellaneous tools for the VetCalc App.
@@ -109,12 +110,24 @@ public class AppLogic implements Serializable{
          * 4 = Max Dosage
          * */
 
-        out[0] = Double.parseDouble(in[i][1]); // Gets Concentration of Med at position i
-        out[1] = Double.parseDouble(in[i][2]); // Gets Min Dosage Med at position i
-        out[2] = Double.parseDouble(in[i][3]); // Gets Dosage 2/4 of Med at position i
-        out[3] = Double.parseDouble(in[i][4]); // Gets Dosage 3/4 of Med at position i
-        out[4] = Double.parseDouble(in[i][5]); // Gets Max Dosage of Med at position i
+        out[0] = Double.parseDouble(in[i][2]); // Gets Min Dosage Med at position i
+        out[1] = Double.parseDouble(in[i][3]); // Gets Dosage 2/4 of Med at position i
+        out[2] = Double.parseDouble(in[i][4]); // Gets Dosage 3/4 of Med at position i
+        out[3] = Double.parseDouble(in[i][5]); // Gets Max Dosage of Med at position i
+
     }
+
+    public static String getMedName(String [][] in, int i){
+        return in[i][0];
+
+    }
+
+    public static void convertForList(double [] in, List<String> out){
+        for(int i = 0; i < in.length; i++){
+            out.set(i, Double.toString(in[i]));
+        }
+    }
+
 
 
 } // End of AppLogic Class
