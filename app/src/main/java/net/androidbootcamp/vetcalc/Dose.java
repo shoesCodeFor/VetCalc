@@ -10,7 +10,7 @@ public class Dose implements Serializable {
     private String name = "";
     private double concentration = 0;
     private double [] range;
-    private double selectedConc = 0;
+    private double doseStrength = 0;
     private boolean admin = false; // means 'Administered'
 
 
@@ -26,6 +26,15 @@ public class Dose implements Serializable {
         this.name = name;
         this.concentration = concentration;
         this.range = range;
+        this.doseStrength = 0;
+    }
+
+    public String getName(){
+        return this.name;
+    }
+
+    public String getConcStr(){
+        return  Double.toString(this.concentration);
     }
 
     public void giveDose(){
@@ -36,18 +45,16 @@ public class Dose implements Serializable {
         this.range = range;
     }
 
-    public void setSelectedConc(double selectedConc){
-        this.selectedConc = selectedConc;
+    public void setSelectedStrength(int position){
+        this.doseStrength = range[position];
 
     }
 
-    public String getName(){
-        return this.name;
+    public double getSelectedStrength(){
+        return this.doseStrength;
     }
 
-    public String getConcStr(){
-        return  Double.toString(this.concentration);
-    }
+
     public double [] getRange(){return this.range;}
 
     public String [] getRangeStr(){

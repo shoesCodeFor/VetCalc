@@ -27,6 +27,9 @@ public class ERMedsActivity extends AppCompatActivity {
 
         final AppLogic tools = new AppLogic();
         final String [] medList = new String[meds.erMedications.length];
+        final String [] doseRangeLbl = new String[4];
+        Arrays.fill(doseRangeLbl, " ");
+        doseRangeLbl[0] = "Select a dosage value:";
         tools.fillMedList(meds.erMedications, medList);
 
         /**
@@ -42,17 +45,19 @@ public class ERMedsActivity extends AppCompatActivity {
          * On dosage selection we will create a new Dose object
          *
          */
-        Spinner doseSpinner = (Spinner) findViewById(R.id.doseSpinner);
-        final List<String> doseVals = new ArrayList<String>();
+        final Spinner doseSpinner = (Spinner) findViewById(R.id.doseSpinner);
+        final List<String> doseVals = new ArrayList<String>(Arrays.asList(doseRangeLbl));
         ArrayAdapter<String> dose_adp;
-        dose_adp = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, doseVals);
+        dose_adp = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, doseVals);
         dose_adp.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+        doseSpinner.setAdapter(dose_adp);
 
         /** This spinner controls the Medication selected
          *
+         *
          */
         final Spinner medSpinner = (Spinner) findViewById(R.id.medSelector);
-        List<String> medVals = new ArrayList<String>(Arrays.asList(medList));
+        final List<String> medVals = new ArrayList<String>(Arrays.asList(medList));
         ArrayAdapter<String> med_adp;
         med_adp= new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, medVals);
         med_adp.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);// This is a preset value
@@ -62,7 +67,7 @@ public class ERMedsActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                 double [] tempRange = new double[4];
                 tools.getDoseRange(meds.erMedications, position, tempRange);
-                Dose oneDose = new Dose(
+                final Dose oneDose = new Dose(
                         medList[position],
                         Double.parseDouble(meds.erMedications[position][1]),
                         tempRange
@@ -70,10 +75,20 @@ public class ERMedsActivity extends AppCompatActivity {
                 System.out.println(position);
                 medName.setText(oneDose.getName());
                 medConc.setText(oneDose.getConcStr());
+                doseSpinner.setSelection(0);
+                tools.convertForList(oneDose.getRange(),doseVals);
+                doseSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        oneDose.setSelectedStrength(position);
+                        System.out.println(oneDose.getSelectedStrength());
+                    }
 
-                for(int i = 0; i < 5; i++){
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
 
-                }
+                    }
+                });
 
             }
 

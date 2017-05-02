@@ -39,7 +39,6 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="0dp"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -61,8 +60,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#ba6366"
-            android:paddingBottom="10sp"
-            android:paddingTop="10sp">
+            android:paddingBottom="10dp"
+            android:paddingTop="10sp"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
 
             <TextView
                 android:id="@+id/medHeader"
@@ -85,76 +86,58 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="12sp"
-                android:text="Dosage Range" />
+                android:text="Dosage Range mg/kg" />
+
         </TableRow>
 
     </TableLayout>
 
-    <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="0dp"
-        android:layout_height="619dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+    <TableRow
+        android:id="@+id/medDetails"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        android:background="#6393ba"
+        android:paddingBottom="10sp"
+        android:paddingTop="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/headerTable">
+        app:layout_constraintTop_toBottomOf="@+id/headerTable"
+        app:layout_constraintVertical_bias="0.0">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/medName"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:paddingLeft="10sp"
+            android:paddingRight="15sp"
+            android:text="Medication Name"
+            android:textColor="#18172f" />
 
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/medConc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:paddingLeft="12sp"
+            android:text="@string/concentrationVal" />
 
-                <TableRow
-                    android:id="@+id/medDetails"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="5sp"
-                    android:background="#6393ba"
-                    android:paddingBottom="10sp"
-                    android:paddingTop="10sp">
+        <Spinner
+            android:id="@+id/doseSpinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:elevation="16dp"
+            android:gravity="right"
+            android:paddingLeft="5sp"
+            android:paddingRight="5sp"
+            />
 
-                    <TextView
-                        android:id="@+id/medName"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5sp"
-                        android:paddingLeft="5sp"
-                        android:paddingRight="15sp"
-                        android:text="Medication Name"
-                        android:textColor="#18172f" />
+    </TableRow>
 
-                    <TextView
-                        android:id="@+id/medConc"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5sp"
-                        android:paddingLeft="12sp"
-                        android:text="Concentration" />
-
-                    <Spinner
-                        android:id="@+id/doseSpinner"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10sp"
-                        android:elevation="16dp"
-                        android:paddingLeft="25sp" />
-
-                </TableRow>
-
-                <TableRow
-                    android:id="@+id/medDetails0"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-            </TableLayout>
-        </LinearLayout>
-    </ScrollView>
 </android.support.constraint.ConstraintLayout>

@@ -39,6 +39,7 @@
     <string name="closingAdv" translatable="false">1/4 to 1/3 shock dose over 20-30 mins, reassess and repeat prn</string>
     <string name="basic_abc"><![CDATA[Grundlæggende ABC->]]></string>
     <string name="medSpinnerHint" translatable="false">Select a Medication from the list:</string>
+    <string name="concentrationVal">Concentration</string>
     <!-- Medication Flow -->
     <!-- Add to Log Flow -->
 </resources>
