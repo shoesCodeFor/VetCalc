@@ -2,11 +2,9 @@ package net.androidbootcamp.vetcalc;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.test.suitebuilder.TestMethod;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -29,7 +27,7 @@ public class ERMedsActivity extends AppCompatActivity {
         final String [] medList = new String[meds.erMedications.length];
         final String [] doseRangeLbl = new String[4];
         Arrays.fill(doseRangeLbl, " ");
-        doseRangeLbl[0] = "Select a dosage value:";
+        doseRangeLbl[0] = "(Min-Max)";
         tools.fillMedList(meds.erMedications, medList);
 
         /**
@@ -59,8 +57,9 @@ public class ERMedsActivity extends AppCompatActivity {
         final Spinner medSpinner = (Spinner) findViewById(R.id.medSelector);
         final List<String> medVals = new ArrayList<String>(Arrays.asList(medList));
         ArrayAdapter<String> med_adp;
-        med_adp= new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, medVals);
-        med_adp.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);// This is a preset value
+        med_adp= new ArrayAdapter<>(this, R.layout.simple_spinner_meds, medVals);
+        // was simple_dropdown_item_1line
+        // med_adp.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);// This is a preset value
         medSpinner.setAdapter(med_adp);
         medSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
