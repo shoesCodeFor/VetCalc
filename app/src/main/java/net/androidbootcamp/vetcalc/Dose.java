@@ -37,6 +37,10 @@ public class Dose implements Serializable {
         return  Double.toString(this.concentration);
     }
 
+    public double getConc(){
+        return this.concentration;
+    }
+
     public void giveDose(){
         admin = true;
     }
