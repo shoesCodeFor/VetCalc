@@ -18,8 +18,7 @@
     <!-- Emergency Flow Content -->
     <string-array name="flow">
         <item>Emergency Meds</item>
-        <item>Canine Meds</item>
-        <item>Feline Meds</item>
+        <item>General Meds</item>
         <item>Emergency Flow Chart</item>
     </string-array>
     <string name="emergencyHeader" translatable="false">Begin BASIC life support : A B C</string>

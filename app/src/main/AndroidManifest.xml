@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".ERABCsActivity" />
-        <activity android:name=".ERMedsActivity"></activity>
+        <activity android:name=".ERMedsActivity" />
+        <activity android:name=".GenMedsActivity"></activity>
     </application>
 
 </manifest>

@@ -7,7 +7,7 @@
     android:textAlignment="gravity"
     android:gravity="left"
     android:textColor="#000"
-    android:textSize="28dp"
-    
+    android:textSize="25dp"
+
 
     />

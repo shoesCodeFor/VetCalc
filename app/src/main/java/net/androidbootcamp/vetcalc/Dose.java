@@ -1,6 +1,7 @@
 package net.androidbootcamp.vetcalc;
 
 import java.io.Serializable;
+import java.text.DecimalFormat;
 
 /**
  * Created by Shoe on 4/27/17.
@@ -11,8 +12,10 @@ public class Dose implements Serializable {
     private double concentration = 0;
     private double [] range;
     private double doseStrength = 0;
+    private double dosage = 0;
+    private double amount = 0;
     private boolean admin = false; // means 'Administered'
-
+    DecimalFormat decimalFormat = new DecimalFormat("###,###.##");
 
 
 
@@ -67,6 +70,19 @@ public class Dose implements Serializable {
             rangeStr[i] = Double.toString(range[i]);
         }
         return  rangeStr;
+    }
+
+    public void setAmount(double patientWeight){
+        this.dosage = patientWeight * doseStrength;
+        this.amount = this.dosage / concentration;
+    }
+
+    public String getDosage(){
+        return decimalFormat.format(this.dosage) + " mg";
+    }
+
+    public String getAmount(){
+        return decimalFormat.format(this.amount) + " ml";
     }
 
 

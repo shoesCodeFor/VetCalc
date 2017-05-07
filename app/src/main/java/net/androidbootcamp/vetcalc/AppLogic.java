@@ -15,7 +15,7 @@ import java.util.List;
  *   AppLogic Class contains miscellaneous tools for the VetCalc App.
  */
 public class AppLogic implements Serializable{
-    public static DecimalFormat wtFormat = new DecimalFormat("###,###.##");
+    public static DecimalFormat decimalFormat = new DecimalFormat("###,###.##");
 
 
     /**
@@ -39,8 +39,8 @@ public class AppLogic implements Serializable{
 
         String lbsLabel = "Pounds: ";
         String kgsLabel = "Kilograms: ";
-        lbsLabel += wtFormat.format(lb);
-        kgsLabel += wtFormat.format(kg);
+        lbsLabel += decimalFormat.format(lb);
+        kgsLabel += decimalFormat.format(kg);
 
         // DecimalFormat wtFormat = new DecimalFormat("###,###.##");
         // In a basic context this will pass 0 or false
@@ -126,8 +126,12 @@ public class AppLogic implements Serializable{
         for(int i = 0; i < in.length; i++){
             out.set(i, Double.toString(in[i]));
         }
+
     }
 
+    public String decFrom(double a){
+        return decimalFormat.format(a);
+    }
 
 
 } // End of AppLogic Class
