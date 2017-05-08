@@ -116,6 +116,28 @@ public class AppLogic implements Serializable{
         out[3] = Double.parseDouble(in[i][5]); // Gets Max Dosage of Med at position i
 
     }
+    public static void getDoseRangeLg(String[][] in, int i, double [] out){
+        /** Our data in the Medication goes like this
+         * Inputs:
+         * 0 = Name
+         * 1 = Concentration (out[0])
+         * 2 = Min Range
+         * 5 = Max Range
+         *
+         * Outputs:
+         * 0 = Concentration
+         * 1 = Min Dosage
+         * 4 = Max Dosage
+         * */
+
+        out[0] = Double.parseDouble(in[i][2]); // Gets Min Dosage Med at position i
+        out[1] = Double.parseDouble(in[i][3]);
+        out[2] = Double.parseDouble(in[i][4]);
+        out[3] = Double.parseDouble(in[i][5]); //
+        out[4] = Double.parseDouble(in[i][6]);
+        out[5] = Double.parseDouble(in[i][7]); // Gets Max Dosage of Med at position i
+
+    }
 
     public static String getMedName(String [][] in, int i){
         return in[i][0];

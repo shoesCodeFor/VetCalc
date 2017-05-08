@@ -17,6 +17,7 @@
     <string name="defaultWeight" translatable="false">0</string>
     <!-- Emergency Flow Content -->
     <string-array name="flow">
+        <item>Home</item>
         <item>Emergency Meds</item>
         <item>General Meds</item>
         <item>Emergency Flow Chart</item>

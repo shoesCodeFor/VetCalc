@@ -149,11 +149,18 @@ public class ERMedsActivity extends AppCompatActivity {
         // was simple_dropdown_item_1line
         // med_adp.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);// This is a preset value
         navSpinner.setAdapter(nav_adp);
+        navSpinner.setSelection(1);
         navSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if(position ==1 ){
-                    launchNewAct(view, fido);
+                if(position == 2){
+                    launchGen(view, fido);
+                }
+                if(position == 0){
+                    goHome(view, fido);
+                }
+                if(position == 3){
+                    erABCGo(fido);
                 }
             }
 
@@ -170,11 +177,22 @@ public class ERMedsActivity extends AppCompatActivity {
 
     } // End of onCreate
 
-    public void launchNewAct(View view, Object o){
+    public void launchGen(View view, Object o){
         Intent i;
         i = new Intent(this, GenMedsActivity.class);
         i.putExtra("patientObj", (Serializable) o);
         startActivity(i);
-
+    }
+    public void goHome(View view, Object o){
+        Intent i;
+        i = new Intent(this, MainActivity.class);
+        i.putExtra("patientObj", (Serializable) o);
+        startActivity(i);
+    }
+    public void erABCGo(Object o){
+        Intent i;
+        i = new Intent(this, ERABCsActivity.class);
+        i.putExtra("patientObj", (Serializable) o);
+        startActivity(i);
     }
 }  // End of Class
