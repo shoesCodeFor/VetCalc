@@ -39,7 +39,11 @@ public class ERMedsActivity extends AppCompatActivity {
         doseRangeLbl[0] = "(Min-Max)";
         final double [] tempRange = new double[4];
 
-        // Fill our Spinner with medications
+        /**
+         *  Fill our Spinner with medications
+         *  todo - Refactor to respond to Nav selection with Switch
+          */
+
         tools.fillMedList(meds.erMedications, medList);
 
         /**

@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.text.DecimalFormat;
 
 /**
- * Created by Shoe on 4/27/17.
+ *  Dose class is a single calculation of a medications.
  */
 
 public class Dose implements Serializable {
@@ -25,6 +25,12 @@ public class Dose implements Serializable {
 
     }
 
+    /**
+     *
+     * @param name = is the name of the medication
+     * @param concentration = is the concentration from the manufacturer
+     * @param range = is the safe dosage range
+     */
     public Dose(String name, double concentration, double[] range){
         this.name = name;
         this.concentration = concentration;
@@ -52,6 +58,10 @@ public class Dose implements Serializable {
         this.range = range;
     }
 
+    /**
+     * Set the medication strength
+     * @param position = ith place in the array or ranges
+     */
     public void setSelectedStrength(int position){
         this.doseStrength = range[position];
 
@@ -72,15 +82,25 @@ public class Dose implements Serializable {
         return  rangeStr;
     }
 
+    /**
+     *
+     * @param patientWeight = this will create the dose based on a selected strength and patient weight
+     */
     public void setAmount(double patientWeight){
         this.dosage = patientWeight * doseStrength;
         this.amount = this.dosage / concentration;
     }
 
+    /**
+     * @return = The medication dosage formatted for the UI
+     */
     public String getDosage(){
         return decimalFormat.format(this.dosage) + " mg";
     }
 
+    /**
+     * @return = The medication in ml formulated from the concentration (dosage/concentration)
+     */
     public String getAmount(){
         return decimalFormat.format(this.amount) + " ml";
     }

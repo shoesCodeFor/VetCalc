@@ -10,12 +10,12 @@
     <Spinner
         android:id="@+id/flowSelect"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#c2fff5"
+        android:layout_height="100dp"
+        android:background="@drawable/whitegradnav_1"
         android:entries="@array/flow"
         android:padding="20sp"
         android:spinnerMode="dialog"
-        android:textSize="36sp" />
+        android:textSize="30sp" />
 
     <ScrollView
         android:id="@+id/erContainer"
@@ -38,7 +38,8 @@
                 android:id="@+id/patientData"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="TextView"
+                android:visibility="invisible" />
 
             <TextView
                 android:id="@+id/emergencyHead"
@@ -117,11 +118,13 @@
                 android:text="@string/adv3"
                 android:textColor="@android:color/black"
                 android:textSize="24sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:visibility="invisible" />
 
             <TableLayout
                 android:layout_width="fill_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:visibility="invisible">
 
                 <TableRow
                     android:layout_width="wrap_content"

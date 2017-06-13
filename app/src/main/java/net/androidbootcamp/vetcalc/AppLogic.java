@@ -37,10 +37,9 @@ public class AppLogic implements Serializable{
            Lbs/Kgs will be displayed for user confirmation
         */
 
-        String lbsLabel = "Pounds: ";
-        String kgsLabel = "Kilograms: ";
-        lbsLabel += decimalFormat.format(lb);
-        kgsLabel += decimalFormat.format(kg);
+        String lbsLabel = decimalFormat.format(lb);
+        String kgsLabel = decimalFormat.format(kg);
+
 
         // DecimalFormat wtFormat = new DecimalFormat("###,###.##");
         // In a basic context this will pass 0 or false

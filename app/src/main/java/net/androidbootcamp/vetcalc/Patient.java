@@ -67,33 +67,55 @@ public class Patient implements Serializable {
         }
     }
 
+    /**
+     * @param name = Patient's name as a String
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     * @param species = Patient species (Feline or Canine only for now)
+     */
     public void setSpecies(String species) {
         this.species = species;
     }
 
-    // getWeight() returns Patient the double weight as kilograms
+    /**
+     *
+     * @return = Patient the double weight as kilograms
+     */
     public double getWeight() {
         return weight;
     }
 
-    // getPounds() returns Patient double weight as pounds
+    /**
+      * @return = Patient double weight as pounds
+     */
     public double getPounds() {
         return pounds;
     }
 
-    //getKilos() returns Patient double weight as kilogams
+    /**
+     *
+     * @return = Patient double weight as kilogams
+     */
     public double getKilos() {
         return kg;
     }
 
+    /**
+     *
+     * @return = Patient name as a string
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     *
+     * @return = The patient species in a String
+     */
     public String getSpecies() {
         return species;
     }
