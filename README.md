@@ -8,6 +8,6 @@ The project is developed with Java using Android Studio.
 
 Calculations:  
 <ul>
-<li><a href="http://csuvth.colostate.edu/emergencydrugcalculator/">CSU Medication Dosage Calculator</a></li>
-<li></li>
+<li><a href="http://csuvth.colostate.edu/emergencydrugcalculator/">CSU Veterinary Medication Dosage Calculator</a></li>
+<li><a href="http://www-users.med.cornell.edu/~spon/picu/calc/druginp3.htm">Cornell Veterinary Medication Dosage Calculator</a></li>
 </ul>
